@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "test": "jest --config=jest.config.cjs",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.9.0",
