@@ -1,0 +1,14 @@
+.cmn-btn-style{
+  background: #222;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 767px) {
+  .search-bar{
+    min-width: 100% !important;
+  }
+}
