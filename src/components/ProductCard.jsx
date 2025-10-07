@@ -31,6 +31,7 @@ export default function ProductCard({ product }) {
                 <CommonButton to={`/product/${product.id}`}>View</CommonButton>
                 <NoStyleButton
                     aria-pressed={isFav}
+                    aria-label={!isFav ? `Add ${product.title} to favorites` : `Remove ${product.title} from favorites`}
                     onClick={() => dispatch(isFav ? removeFavorite(product.id) : addFavorite(product.id))}
                 >
                     {!isFav ? <FaRegHeart color='#ff0000' /> : <FaHeart color='#ff0000'/>}
