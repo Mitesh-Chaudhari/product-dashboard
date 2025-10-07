@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import { removeFavorite } from '../features/favorites/favoritesSlice';
 
 const Grid = styled.div`display:grid;grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));gap:16px;padding:24px;`;
+const CommonButton = styled(Link)`padding:8px 14px;border-radius:8px;border:1px solid #ddd;background:transparent;cursor:pointer;background:#222;color:#fff;font-size: 14px;`;
+
 
 export default function FavoritesPage() {
   const favIds = useSelector((s) => s.favorites.items);
@@ -22,8 +24,8 @@ export default function FavoritesPage() {
           <Link to={`/product/${p.id}`}><img src={p.image} alt={p.title} style={{height:120,objectFit:'contain'}}/></Link>
           <h4 style={{fontSize:14}}>{p.title}</h4>
           <div style={{display:'flex',justifyContent:'space-between'}}>
-            <Link to={`/product/${p.id}`}>View</Link>
-            <button onClick={() => dispatch(removeFavorite(p.id))} aria-label={`Remove ${p.title} from favorites`}>Remove</button>
+            <CommonButton to={`/product/${p.id}`}>View</CommonButton>
+            <button className='cmn-btn-style' onClick={() => dispatch(removeFavorite(p.id))} aria-label={`Remove ${p.title} from favorites`}>Remove</button>
           </div>
         </article>
       ))}
