@@ -4,9 +4,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import store from '../app/store';
 import ProductCard from '../components/ProductCard';
-import { addFavorite, removeFavorite } from '../features/favorites/favoritesSlice';
 import { useState } from 'react';
-import styled from 'styled-components';
 
 // Mock Products
 const mockProducts = [
